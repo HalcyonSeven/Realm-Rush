@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-[ExecuteAlways]
 public class CoordinateLabeller : MonoBehaviour
 {
     private TextMeshPro label;
