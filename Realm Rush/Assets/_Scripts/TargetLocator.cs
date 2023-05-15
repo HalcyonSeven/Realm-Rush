@@ -32,17 +32,20 @@ public class TargetLocator : MonoBehaviour
         foreach (Enemy enemy in enemies)
         {
             float targetDistance = Vector3.Distance(transform.position, enemy.transform.position);
+
             if (targetDistance < maxDistance)
             {
                 closestTarget = enemy.transform;
                 maxDistance = targetDistance;
             }
         }
+        target = closestTarget;
     }
 
     private void Aimweapon()
     {
         float targetDistance = Vector3.Distance(transform.position, target.position);
+        
         weapon.LookAt(target);
         if (targetDistance <= range)
         {
